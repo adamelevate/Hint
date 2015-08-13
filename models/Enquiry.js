@@ -51,9 +51,9 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 			to: admins,
 			from: {
 				name: 'ComfortGuardPublic',
-				email: 'contact@comfortguardpublic.com'
+				email: 'contact@hintstack.com'
 			},
-			subject: 'New Enquiry for ComfortGuardPublic',
+			subject: 'New Enquiry for Hint',
 			enquiry: enquiry
 		}, callback);
 		
