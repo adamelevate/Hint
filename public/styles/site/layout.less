@@ -7,11 +7,11 @@ top
  
 .header{
 	background: url('../images/top-bg.jpg') top center;
-    @media (max-width: @screen-sm-max) {  
-      background-position: top left;
-    }
-  min-height: 660px;
-	.cover;
+  .cover;
+  @media (max-width: @screen-sm-max) {  
+    background-position: top left;
+    .container{min-height: 550px!important;}
+  }
   .container{
     min-height: 660px;
   }
@@ -28,6 +28,9 @@ top
 	}
 	h1{
 		margin-top:220px;
+    @media (max-width: @screen-sm-max) { 
+    margin-top: 80px;
+    }
 	}
   span.price{
     font-size: 30px;
@@ -224,6 +227,9 @@ section.wood{
   padding: 40px 0 45px;
   h1{
     margin-bottom: 25px;
+    @media (max-width: @screen-sm-max) { 
+      margin-top: 0px;
+    }
   }
   h1,p{
     color:#fff;
@@ -237,6 +243,9 @@ section.wood{
     max-width: 365px;
     margin: 0 auto;
     display: block;
+    @media (max-width: @screen-sm-max) {
+      max-width: 90%;
+    }
   }
 }
 
@@ -251,6 +260,9 @@ section.maintain{
   .beigegradient;
   h1{
     margin-top: 90px;
+    @media (max-width: @screen-sm-max) { 
+      margin-top: 20px;
+    }
   }
   img{
     position: absolute;
@@ -275,6 +287,9 @@ section.sense{
   .greengradient;
   h1{
     margin-top: 80px;
+    @media (max-width: @screen-sm-max) { 
+      margin-top: 20px;
+    }
   }
   h1,p{
     color:#fff;
@@ -301,6 +316,9 @@ section.fix{
   .beigegradient;
   h1{
       margin-top: 90px;
+      @media (max-width: @screen-sm-max) { 
+        margin-top: 20px;
+      }
     }
   img{
     position: absolute;
