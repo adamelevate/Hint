@@ -105,7 +105,17 @@
 		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.4.min.js"></script>
 		{{{isAdminEditorJS user}}}
+		<script src="js/vendor/stickUp.min.js"></script>
+ 		<script type="text/javascript">
+          //initiating jQuery
+          jQuery(function($) {
+            $(document).ready( function() {
+              //enabling stickUp on the '.navbar-wrapper' class
+              $('.navbar-wrapper').stickUp();
+            });
+          });
 
+        </script>
 
 	</body>
 </html>
