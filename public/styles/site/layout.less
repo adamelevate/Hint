@@ -233,9 +233,23 @@ shows you the ropes
   .icon{
     text-align: center;
     color: @primary;
-    font-size: 80px;
+    //font-size: 80px;
     display: block;
-    padding: 20px 0;
+    //padding: 20px 0;
+    height: 120px;
+    width: 120px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: -10px auto;
+  }
+  .icon-sense{
+    background: url(../images/svg/sense.svg);
+  }
+  .icon-hintbox{
+    background:  url(../images/svg/hintbox.svg);
+  }
+  .icon-phone{
+    background: url(../images/svg/phone.svg)
   }
 }
 
@@ -252,7 +266,8 @@ section.transparency{
     background: url('../images/insight.jpg') no-repeat center center;
     .cover;
     @media (max-width: @screen-sm-max) {  
-      background-position: top right;
+      background-position: 73% 10%;
+      background-size: initial;
     }
   }
   //.greengradient;
