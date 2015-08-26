@@ -105,13 +105,28 @@
 		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.4.min.js"></script>
 		{{{isAdminEditorJS user}}}
-		<script src="js/vendor/stickUp.min.js"></script>
+		
  		<script type="text/javascript">
           //initiating jQuery
           jQuery(function($) {
             $(document).ready( function() {
               //enabling stickUp on the '.navbar-wrapper' class
-              $('.navbar-wrapper').stickUp();
+              //$('.navbar-wrapper').stickUp();
+
+				var height = $('.header').height();
+				var nav = $("#nav");
+
+				$(window).bind("scroll", function(e) {
+				    console.log($('body').scrollTop());
+				  if ($('body').scrollTop() > height-120) {
+				    nav.addClass("fix");
+				  } else {
+				    nav.removeClass("fix");
+				  }
+				  
+				});
+
+
             });
           });
 
