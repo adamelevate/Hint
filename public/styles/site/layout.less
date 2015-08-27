@@ -27,6 +27,7 @@ body, html, #body{
     opacity: 0;
     .button{
       margin-top: 18px;
+      background: @secondary;
     }
     &.fix{
      background: #fff; 
@@ -42,8 +43,8 @@ New Header
 ************/
  
 .header{
-  // background: url('../images/top-bg.jpg') top center;
-  // .cover;
+  background: url('../images/main.jpg') top center;
+  .cover;
   // @media (max-width: @screen-sm-max) {  
   //   background-position: top left;
   //   .container{min-height: 550px!important;}
@@ -52,7 +53,7 @@ New Header
   -moz-box-shadow:    0px 3px 4px 0px rgba(50, 50, 50, 0.40);
   box-shadow:         0px 3px 4px 0px rgba(50, 50, 50, 0.40);
  margin-top: 0!important;
- background: @primary;
+ //background: @primary;
  color:#fff;
   .container{
     height: 88vh;
@@ -60,7 +61,7 @@ New Header
     padding: 0 2%;
   }
   h1{
-    margin-top:220px;
+    //padding-top:220px;
     color: #fff;
     @media (max-width: @screen-sm-max) { 
     margin-top: 80px;
@@ -69,8 +70,13 @@ New Header
   img{
     fill:#fff;
   }
+  svg{
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+  }
   .st1{
-    stroke:darken(@primary, 5%);
+    stroke:#fff;
   }
   // span.price{
   //   font-size: 30px;
@@ -81,7 +87,11 @@ New Header
   //   font-family: "proximanova-light";
   // }
   a.button{
-
+    background: @secondary;
+    color: #fff;
+    min-width: 200px;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
@@ -107,11 +117,16 @@ section{
 
   }
   h1{
-    position: absolute;
-    left: 2%;
-    top: 20%;
-    width: 30%;
-    z-index: 99999;
+    text-align: center;
+    display: block;
+    width: 100%;
+    &.callout{
+      position: absolute;
+      left: 2%;
+      top: 20%;
+      width: 30%;
+      z-index: 99999;
+    }
       @media (max-width: @screen-sm-max) {  
         top: 0;
         right: 0;
@@ -315,16 +330,90 @@ Gives You Options
 
 ************/
 
-section.option{
-  background: url('../images/woodgrain.jpg') no-repeat center center;
-  .cover;
+section.options{
+  padding: 50px 0; 
   h1{
     margin-bottom: 25px;
     @media (max-width: @screen-sm-max) { 
       margin-top: 0px;
     }
   }
-
+  .col-sm-6{
+        @media (max-width: @screen-sm-max) { 
+      margin-bottom: 20px;
+    }
+  }
+  .service{
+    .wrapper{
+      border-color: #7691a6;
+        h3{
+          color: #7691a6;
+        }
+    }
+    .footer{
+      background: #7691a6;
+    }
+  }
+  .wrapper{
+    border: 2px solid @primary;
+    //border: 2px solid #ddd;
+    border-radius: 4px 4px 0 0;
+    padding: 10px;
+    margin-bottom: 0;
+    h3{
+      margin: 5px 0 10px;
+      text-align: center;
+      color: @primary;
+      font-family: "proximanova-regular";
+    }
+    ul{
+      color: #888;
+      font-size: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        line-height: 30px;
+        padding: 0;
+        text-align: center;
+        border-top: 1px solid #e5e5e5;
+      }      
+    }
+  }
+  .footer{
+    background: @primary;
+    border-radius: 0 0 4px 4px;
+    padding: 0 0 20px 0;
+    h5{
+      margin: 0;
+      padding: 10px;
+      color: #fff;
+    }
+    .bill{
+      background: #fff;
+      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      padding: 10px 0 1px;
+      margin:0 auto; 
+      .row{
+        text-align: center;
+      }
+      table{
+        width: 92%;
+        border-top: 1px solid #eee;
+        tfoot{
+          font-size: 18px;
+        }
+      }
+    }
+  
+  }
+  .yellow{
+    background:#d3dd74;
+    h1{
+      color: #fff;
+    }
+  }
 }
 
 
