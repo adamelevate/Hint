@@ -59,6 +59,9 @@ New Header
     height: 88vh;
     width: 100%;
     padding: 0 2%;
+    @media (max-width: @screen-sm-max) { 
+      height: 100vh;
+    }
   }
   h1{
     //padding-top:220px;
@@ -126,7 +129,6 @@ section{
       top: 20%;
       width: 30%;
       z-index: 99999;
-    }
       @media (max-width: @screen-sm-max) {  
         top: 0;
         right: 0;
@@ -136,6 +138,7 @@ section{
         width: 100%;
         font-family: "proximanova-bold";
       }
+    }
   }
   h5{
     font-size: 15px;
@@ -391,7 +394,7 @@ section.options{
     }
     .bill{
       background: #fff;
-      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+      //box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
       width: 90%;
       padding: 10px 0 1px;
       margin:0 auto; 
@@ -399,8 +402,9 @@ section.options{
         text-align: center;
       }
       table{
-        width: 92%;
+        width: 93%;
         border-top: 1px solid #eee;
+        margin: 10px auto 10px;
         tfoot{
           font-size: 18px;
         }
