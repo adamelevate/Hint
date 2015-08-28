@@ -104,6 +104,7 @@
 			//- them specifically here, instead of bootstrap-3.3.4.min.js
 		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.4.min.js"></script>
+		<script src="/js/vendor/tabulous.min.js"></script>
 		{{{isAdminEditorJS user}}}
 		
  		<script type="text/javascript">
@@ -113,14 +114,26 @@
               //enabling stickUp on the '.navbar-wrapper' class
               //$('.navbar-wrapper').stickUp();
 
+				$('#tabs').tabulous();
+
+				$('#tabs a').bind('click', function(){
+					if($('.showscale')){
+						var src = $('.showscale img').attr('src');
+						$('.showscale img').attr('src', src);
+					}
+				})
+
 				var height = $('.header').height();
 				var nav = $("#nav");
+				var gif = $('#tabs').offset().top;
 
 				$(window).bind("scroll", function(e) {
-				    console.log($('body').scrollTop());
-				  if ($('body').scrollTop() > height-120) {
+				    console.log('body', $('body').scrollTop());
+				    console.log('gif', gif);
+				  if ($('body').scrollTop() > height-110) {
 				    nav.addClass("fix");
-				  } else {
+				  }
+				  else {
 				    nav.removeClass("fix");
 				  }
 				  
