@@ -114,14 +114,28 @@
               //enabling stickUp on the '.navbar-wrapper' class
               //$('.navbar-wrapper').stickUp();
 
-				$('#tabs').tabulous();
+				// $('#tabs').tabulous();
 
-				$('#tabs a').bind('click', function(){
-					if($('.showscale')){
-						var src = $('.showscale img').attr('src');
-						$('.showscale img').attr('src', src);
-					}
-				})
+				// $('#tabs a').bind('click', function(){
+				// 	if($('.showscale')){
+				// 		var src = $('.showscale img').attr('src');
+				// 		$('.showscale img').attr('src', src);
+				// 	}
+				// })
+	            $('#tabs li').click(function(){
+					var tab_id = $(this).attr('data-tab');
+
+					$('#tabs li').removeClass('current');
+					$('.tab-content').removeClass('current');
+				
+					$('#text p').removeClass('current');
+
+					$(this).addClass('current');
+					var img = $("#"+tab_id).find('img').attr('data-src');
+					$("#"+tab_id).addClass('current').find('img').attr('src', img);
+
+					$('#text p[data-tab="'+ tab_id +'"]').addClass('current');
+				});
 
 				var height = $('.header').height();
 				var nav = $("#nav");

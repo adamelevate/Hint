@@ -237,6 +237,14 @@ Why
 }
 
 
+section.how{
+      .tab-content{
+      display: none;
+      &.current{
+        display: inherit;
+      }
+    }
+}
 
 
 
@@ -328,43 +336,65 @@ shows you the ropes
   }
   img{
     border: none;
+    margin-top: -45px;
   }
   #tabs{
-    ul{
-      list-style: none;
-      padding:0; 
-      width: 40%;
-      float: left;
-    }
-    #tabs_container{
-      width: 60%;
-      float: right;
-      > div{
-        top:0 !important;
-      }
-    }
-    ul li a{
-      display: block;
-      background: transparent;
-      margin-bottom: 1rem;
-      &:hover, &:active, &:focus{
-        text-decoration: none;
-      }
-      strong{
-        font-size: 2rem;
-        line-height: 2.2rem;
-        font-family: "proximanova-light";
-        color: #666;
-        display: inline-block;
-      }
+    #text{
       p{
         display: none;
         font-size: 1.5rem; 
+        &.current{
+          display: block;
+        }
       }
-      &.tabulous_active{
+    }
+    ul{
+      list-style: none;
+      padding:0; 
+    }
+    ul li{
+      display: block;
+      background: transparent;
+      margin-bottom: 1rem;
+      width: 33%;
+      float: left;
+      &:hover{
+        span{
+          background: #f2f2f2;
+        }
+      }
+      &:hover, &:active, &:focus{
+        text-decoration: none;
+        cursor: pointer;
+      }
+      span{
+        width: 100px;
+        height: 100px;
+        font-size: 45px;
+        line-height: 100px;
+        text-align: center;
+        border-radius: 50%;
+        color: #7691a6;
+        margin: 0 auto;
+        display: block;
+        border: 2px solid #7691a6;
+      }
+      strong{
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+        font-family: "proximanova-light";
+        color: #7691a6;
+        display: block;
+        text-align: center;
+      }
+      &.current{
+        span{
+          background: @secondary;
+          color: #fff;
+          border-color: @secondary;
+        }
         strong{
-          margin-bottom: 10px;
-          color:@primary;
+          color:@secondary;
         }
         p{
           display: block;

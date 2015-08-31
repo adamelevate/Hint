@@ -94,39 +94,48 @@
 
 <section class="how hidden-xs">
 	<div class="container ">
-		<div id="tabs">
+		<h1>Here's how Hint works.</h1>
+		<div class="row" id="tabs">
+			
+		<div class="col-sm-5">
 			<ul>
-				<li><a href="#tabs-1" title="">
-					<strong>Sense <i class="glyphicon glyphicon-menu-right"></i></strong>
-					<p>Hint uses multiple sensors to monitor your appliances around the clock. These sensors are battle tested and exactly like the sensors technicians use.</p>
-				</a></li>
-				<li><a href="#tabs-2" title="">
-					<strong>Diagnose <i class="glyphicon glyphicon-menu-right"></i></strong>
-				<p>Hint can tell the difference between low performance and total breakdown. Designed by industry experts, it can sometimes predict when a part will fail.</p>
-
-				</a></li>
-				<li><a href="#tabs-3" title="">
-					<strong>Notify <i class="glyphicon glyphicon-menu-right"></i></strong>
-					<p>Hint will always tell you what's wrong and how to fix it. It won't bother you with alarms based on schedules, just gets your attention when you're needed. </p>
-				</a></li>
+				<li data-tab="tabs-1" class="current">
+					<span>1</span>
+					<strong>Sense</strong>
+				</li>
+				<li data-tab="tabs-2">
+					<span>2</span>
+					<strong>Diagnose</strong>
+				</li>
+				<li data-tab="tabs-3">
+					<span>3</span>
+					<strong>Notify</strong>
+				</li>
 			</ul>
+			<div id="text">
+				<p data-tab="tabs-1" class="current">Hint uses multiple sensors to monitor your appliances around the clock. These sensors are battle tested and exactly like the sensors technicians use.</p>
+				<p data-tab="tabs-2">Hint can tell the difference between low performance and total breakdown. Designed by industry experts, it can sometimes predict when a part will fail.</p>
+				<p data-tab="tabs-3">Hint will always tell you what's wrong and how to fix it. It won't bother you with alarms based on schedules, just gets your attention when you're needed. </p>
+			</div>
+		</div>
+		<div class="col-sm-7">
 			<div id="tabs_container">
 
-				<div id="tabs-1">
-					<img src="images/gifs/sense.gif" alt="">
+				<div id="tabs-1" class="tab-content current">
+					<img src="images/gifs/sense.gif" data-src="images/gifs/sense.gif" alt="">
 				</div>
 
-				<div id="tabs-2">
-					<img src="images/gifs/diagnose.gif" alt="">
+				<div id="tabs-2" class="tab-content">
+					<img src="images/gifs/diagnose.gif" data-src="images/gifs/diagnose.gif" alt="">
 				</div>
 
-				<div id="tabs-3">
-					<img src="images/gifs/notify.gif" alt="">
+				<div id="tabs-3" class="tab-content">
+					<img src="images/gifs/notify.gif" data-src="images/gifs/notify.gif" alt="">
 				</div>
 
 			</div><!--End tabs container-->
+		</div>
 		</div><!--End tabs-->
-					<div class="clearfix"></div>
 	</div>
 </section>
 <section class="how visible-xs">
