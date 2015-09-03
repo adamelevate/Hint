@@ -5,11 +5,25 @@ body, html, #body{
 
 
 
+
 /*************
 
 top
 
 ************/
+
+  #logo svg{
+    margin-top: 24px;
+    width:150px;
+    height:100px;
+    color:@primary;
+    path{
+      height: 100%;
+      width:100%;
+      fill:#b3ddc7;
+    }
+  }
+
  
   .navbar-wrapper{
     .logo svg{
@@ -376,6 +390,9 @@ section.fix{
 .contact-us{
   background: url('../images/contact.jpeg') left bottom;
   min-height: 100%;
+    .button{
+    background: @secondary;
+  }
   .hidden-message{
     h1, p{color:#333;}
   }

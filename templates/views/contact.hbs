@@ -1,6 +1,7 @@
 <div class="contact-us">
 	<div class="container">
-			<div class="logo">
+			<div id="logo">
+				<a href="/">
 			<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 width="612px" height="792px" viewBox="100 200 500 400" enable-background="new 0 0 612 792" xml:space="preserve">
 				 <path fill-rule="evenodd" clip-rule="evenodd" d="M517.642,554.979c14.405,0,21.031-3.169,24.489-5.186l4.897,14.117
@@ -16,6 +17,7 @@
 				c-24.488,0-40.046,15.557-45.52,30.25v112.358h-16.71V343.869l16.71,13.519v73.998h1.152c3.457-4.61,17.574-20.744,46.096-20.744
 				c29.674,0,49.265,19.303,49.265,50.129v108.037h-16.71V463.076z M252.317,568.808h-16.709V424.104l16.709-14.36V568.808z"/>
 			</svg>
+			</a>
 		</div>
 		<div class="row">
 			<div class="col-sm-12 visible-xs visible-sm hidden-message">
@@ -42,7 +44,7 @@
 						<label>Phone</label>
 						<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
 					</div>
-					<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+					<div class="hidden form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
 						<label>What would you use Hint for?</label>
 						<select name="enquiryType" class="form-control">
 							<option value="">(select one)</option>
@@ -56,7 +58,7 @@
 						<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
 					</div>
 					<div class="form-actions">
-						<button type="submit" class="button">Submit Beta Application</button>
+						<button type="submit" class="button">Sign Up For The Hint Beta</button>
 					</div>
 				</form>
 				{{/if}}

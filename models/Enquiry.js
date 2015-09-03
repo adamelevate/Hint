@@ -20,7 +20,7 @@ Enquiry.add({
 		{ value: 'SecondaryHome', label: 'My vacation/secondary residence' },
 		{ value: 'Property Management', label: 'Property I manage'}
 	] },
-	message: { type: Types.Markdown, required: true },
+	message: { type: Types.Markdown, required: false},
 	createdAt: { type: Date, default: Date.now }
 });
 
