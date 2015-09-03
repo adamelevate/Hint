@@ -104,6 +104,22 @@
 			//- them specifically here, instead of bootstrap-3.3.4.min.js
 		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.4.min.js"></script>
+		<script type="text/javascript">
+			var height = $('.header').height();
+				var nav = $("#nav");
+				$(window).bind("scroll", function(e) {
+				    console.log('body', $('body').scrollTop());
+				  if ($('body').scrollTop() > height-110) {
+				    nav.addClass("fix");
+				  }
+				  else {
+				    nav.removeClass("fix");
+				  }
+				  
+				});
+
+
+		</script>
 		{{{isAdminEditorJS user}}}
 
 

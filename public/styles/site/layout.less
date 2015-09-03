@@ -3,17 +3,7 @@ body, html, #body{
   height: 100%;
 }
 
-	#logo{
-		margin-top: 24px;
-		width:150px;
-		height:100px;
-		color:@primary;
-		path{
-			height: 100%;
-			width:100%;
-			fill:#b3ddc7;
-		}
-	}
+
 
 /*************
 
@@ -21,6 +11,40 @@ top
 
 ************/
  
+  .navbar-wrapper{
+    .logo svg{
+      margin-top: 10px;
+      width:75px;
+      height:50px;
+      color:@primary;
+      path{
+        height: 100%;
+        width:100%;
+        fill:@primary;
+      }
+    }
+    height: 80px;
+    width: 100%;
+    padding:0 2%;
+    top:0;
+    left: 0;
+    position: fixed!important;
+    transition:.3s all linear;
+    z-index: 99999999;
+    opacity: 0;
+    .button{
+      margin-top: 18px;
+      background: @secondary;
+    }
+    &.fix{
+     background: #fff; 
+     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+     opacity: 1;
+    }
+  }
+
+
+
 .header{
   background: url('../images/top-bg.jpg') top center;
   .cover;
@@ -30,6 +54,17 @@ top
   }
   .container{
     min-height: 660px;
+  }
+  .logo svg{
+    margin-top: 24px;
+    width:150px;
+    height:100px;
+    color:@primary;
+    path{
+      height: 100%;
+      width:100%;
+      fill:#b3ddc7;
+    }
   }
 	h1{
 		margin-top:220px;
