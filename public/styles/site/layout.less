@@ -117,7 +117,7 @@ section{
   .callout{
     height: 70vh;
     background: rgba(255, 255, 255, 1);
-    background:#f2f2f2;
+    //background:#f2f2f2;
     width: 50%;
     &.right{
       margin-left: 50%;
@@ -319,7 +319,7 @@ shows you the ropes
 
 .how{
   padding: 40px 0;
-  //background:#f3f3f3;
+  background:#f3f3f3;
   font-size: 15px;
   line-height: 21px;
   h1{
@@ -339,10 +339,15 @@ shows you the ropes
     margin-top: -45px;
   }
   #tabs{
+    position: relative;
     #text{
       p{
         display: none;
         font-size: 1.5rem; 
+        padding:1.5rem;
+        margin: 0;
+        min-height: 300px;
+        background: #fff; 
         &.current{
           display: block;
         }
@@ -351,12 +356,15 @@ shows you the ropes
     ul{
       list-style: none;
       padding:0; 
+      margin: 0;
+      min-height: 140px;
     }
     ul li{
       display: block;
+      position: relative;
       background: transparent;
-      margin-bottom: 1rem;
-      width: 33%;
+      width: 33.33333333%;
+      min-height: 155px;
       float: left;
       &:hover{
         span{
@@ -366,6 +374,9 @@ shows you the ropes
       &:hover, &:active, &:focus{
         text-decoration: none;
         cursor: pointer;
+      }
+      svg{
+        display: none;
       }
       span{
         width: 100px;
@@ -388,13 +399,20 @@ shows you the ropes
         text-align: center;
       }
       &.current{
+        //background: #fff;
+        svg{
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 38%;
+        }
         span{
-          background: @secondary;
+          background: @primary;
           color: #fff;
-          border-color: @secondary;
+          border-color: @primary;
         }
         strong{
-          color:@secondary;
+          color:@primary;
         }
         p{
           display: block;

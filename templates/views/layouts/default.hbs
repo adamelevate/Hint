@@ -131,10 +131,13 @@
 					$('#text p').removeClass('current');
 
 					$(this).addClass('current');
-					var img = $("#"+tab_id).find('img').attr('data-src');
-					$("#"+tab_id).addClass('current').find('img').attr('src', img);
+					$("#"+tab_id).addClass('current');
 
 					$('#text p[data-tab="'+ tab_id +'"]').addClass('current');
+					
+					var img = $("#"+tab_id).find('img').attr('data-src');
+					console.log(img);
+					$('.tab-content.current').find('img').attr('src', img);
 				});
 
 				var height = $('.header').height();
