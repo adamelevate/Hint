@@ -16,9 +16,9 @@ Enquiry.add({
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
 	enquiryType: { type: Types.Select, options: [
-		{ value: 'PrimaryHome', label: 'My primary residence' },
-		{ value: 'SecondaryHome', label: 'My vacation/secondary residence' },
-		{ value: 'Property Management', label: 'Property I manage'}
+		{ value: 'message', label: 'Just leaving a message' },
+		{ value: 'question', label: 'I\'ve got a question' },
+		{ value: 'other', label: 'Something else...' }
 	] },
 	message: { type: Types.Markdown, required: true },
 	createdAt: { type: Date, default: Date.now }
@@ -50,8 +50,8 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 		new keystone.Email('enquiry-notification').send({
 			to: admins,
 			from: {
-				name: 'ComfortGuardPublic',
-				email: 'contact@hintstack.com'
+				name: 'Hint',
+				email: 'contact@hint.com'
 			},
 			subject: 'New Enquiry for Hint',
 			enquiry: enquiry
