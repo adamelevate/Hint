@@ -65,12 +65,16 @@ top
 header{
   background: url('../images/header.png') top center;
   .cover;
-  @media (max-width: @screen-sm-max) {  
+  @media (min-width: @screen-md-min) {  
     //background-position: top left;
-    .container{min-height: 550px!important;}
+    .container{height: 100vh;}
+      h1{
+          margin-top:12vh;
+          font-size: 5rem;
+      }
   }
   .container{
-    min-height: 660px;
+    //min-height: 660px;
     height:100vh;
     position: relative;
     //background: rgba(0, 0, 0, 0.2);
@@ -88,8 +92,8 @@ header{
     }
   }
 	h1{
-		margin-top:12vh;
-    font-size: 5rem;
+    margin-top:12vh;
+    font-size: 3rem;
     color: #fff;
     font-family: "proximanova-light";
     @media (max-width: @screen-sm-max) { 
@@ -175,23 +179,27 @@ section{
       color: @primary;
     }
   }
-  h2{
-    margin: 20vh 0 2vh;
-  }
-  .fa{
-    font-size: 3.6rem;
-    margin-bottom: 15px;
-    color: @primary;
-  }
-  h4{
-    font-size: 20px;
-    line-height: 20px;
-    font-family: "proximanova-regular";
-    margin: 0;
-  }
-  p{
-    font-size: 14px;
-    line-height: 20px;
+  .container{
+
+    h2{
+      margin: 5vh 0 2vh;
+      font-size: 2rem;
+    }
+    .fa{
+      font-size: 3.6rem;
+      margin-bottom: 15px;
+      color: @primary;
+    }
+    h4{
+      font-size: 20px;
+      line-height: 20px;
+      font-family: "proximanova-regular";
+      margin: 0;
+    }
+    p{
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -254,12 +262,21 @@ section{
 }
 
 .hintbox{
-  height: 80vh;
-  background: url('../images/appliances/hintbox.jpg') bottom center;
+  //height: 80vh;
+  background: url('../images/appliances/hintbox.jpg') bottom right;
   .cover;
   text-align: center;
+  padding-bottom: 5vh;
+  @media (min-width: @screen-sm) { 
+    height: 80vh; 
+    background-position: bottom center;
+    padding-bottom: 0;
+    h2{
+      margin-top: 20vh;
+    }
+  }
   h2{
-    margin-top: 20vh;
+    margin-top: 5vh;
   }
   p{
     font-size: 22px;
