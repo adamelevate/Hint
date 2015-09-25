@@ -1,0 +1,281 @@
+@import "less/normalize.less";
+
+@import "less/media.less";
+@import "less/grid.less";
+@import "less/fonts.less";
+@import "less/variables.less";
+
+
+body, html, #body{
+  min-height: 100%;
+  height: 100%;
+  //color: #898888;
+  color: #716258;
+}
+
+
+
+
+/*************
+
+top
+
+************/
+
+  #logo svg{
+    margin-top: 24px;
+    width:150px;
+    height:100px;
+    color:@primary;
+    path{
+      height: 100%;
+      width:100%;
+      fill:#b3ddc7;
+    }
+  }
+
+ 
+  .navbar-wrapper{
+    .logo svg{
+      margin-top: 10px;
+      width:75px;
+      height:50px;
+      color:@primary;
+      path{
+        height: 100%;
+        width:100%;
+        fill:@primary;
+      }
+    }
+    height: 80px;
+    width: 100%;
+    padding:0 2%;
+    top:0;
+    left: 0;
+    position: fixed!important;
+    transition:.3s all linear;
+    z-index: 99999999;
+    opacity: 0;
+    .button{
+      margin-top: 18px;
+      //background: @secondary;
+      .orangegradient;
+    }
+    &.fix{
+     background: #fff; 
+     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+     opacity: 1;
+    }
+  }
+
+
+
+
+header{
+  background: url('../images/header.png') top center;
+  .cover;
+  @media (max-width: @screen-sm-max) {  
+    //background-position: top left;
+    .container{min-height: 550px!important;}
+  }
+  .container{
+    min-height: 660px;
+    height:100vh;
+    position: relative;
+    //background: rgba(0, 0, 0, 0.2);
+  }
+  .logo{
+    margin-top: 24px;
+    width:150px;
+    height:100px;
+    color:@primary;
+    path{
+      height: 100%;
+      width:100%;
+      //fill:#b3ddc7;
+      fill:#fff;
+    }
+  }
+	h1{
+		margin-top:12vh;
+    font-size: 5rem;
+    color: #fff;
+    font-family: "proximanova-light";
+    @media (max-width: @screen-sm-max) { 
+      margin-top: 80px;
+    }
+	}
+  span{
+    font-family: "proximanova-bold";
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .button{
+    background: #68C8C3;
+    min-width:150px;
+  }
+  .bottom{
+    position: absolute;
+    bottom: 4%;
+    left: 0;
+    width: 100%;
+    .button.more{
+      min-width:150px;
+      max-width: 300px;
+      text-align: center;
+      display: block;
+      background: transparent;
+      color: #fff;
+      //text-decoration: underline;
+      //border: 2px solid #fff; 
+      margin: 0 auto;
+      text-shadow: 0 2px 1px #333;
+      span{
+        display: block;
+        text-align: center;
+        line-height: 14px;
+        font-size: 24px;
+      }
+    } 
+  }
+
+
+}
+
+.min-height{
+  min-height: 460px;
+}
+
+section{
+  .container{
+    position:relative;
+    h2{
+      text-align: center;
+      font-family: "proximanova-light";
+      font-size: 2.6rem;
+      //color: #777;
+      //color: @primary;
+      line-height: 2.8rem;
+    }
+    .sub{
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 600px;
+      margin: 0 auto 10vh;
+    }
+  }
+}
+
+
+
+.three{
+  text-align: center;
+  padding-bottom: 10vh;
+  @media (min-width: @screen-sm) {  
+    height: 80vh; 
+    h2{
+      margin-top: 10vh;
+    }
+  }
+  &.green{
+    .fa{
+      color: @primary;
+    }
+  }
+  h2{
+    margin: 20vh 0 2vh;
+  }
+  .fa{
+    font-size: 3.6rem;
+    margin-bottom: 15px;
+    color: @primary;
+  }
+  h4{
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "proximanova-regular";
+    margin: 0;
+  }
+  p{
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.appliances{
+  padding:5vh 0;
+  h2{
+    color: @primary;
+  }
+  //background: url('../images/top-bg.jpg') top center;
+  //.cover;
+  background:  #f3f3f3;
+  .wrap{
+    background: #fff;
+    width: 90%;
+    border-radius: 10px;
+    //padding: 10px;
+    transition: .2s all linear;
+    &:hover{
+      transform: scale(1.1);
+      box-shadow: 0 5px 5px #ddd;
+    }
+    margin: 0 auto 40px;
+    .appliance{
+      border-radius: 10px 10px 0 0;
+      background-size: cover!important;
+      background-position: center center!important;
+      //background-image: none!important; 
+      background-repeat: no-repeat!important;
+      min-height: 180px;
+    }
+  }
+  img{
+    //border-radius: 50%;
+    width: 75%;
+    margin:0 auto; 
+    display: block;
+    max-width: 200px;
+  }
+  .text{
+    font-size: 20px;
+    text-align:center;
+    line-height: 40px;
+  }
+  .row {
+    .text-center;
+     .col-xs-6{ 
+      padding: 10px 0;
+    }
+    strong{
+      color: @primary;
+    }
+    .dollar{
+      color: #ddd;
+      &.active{
+        color: @primary;
+      }
+    }
+  }
+
+}
+
+.hintbox{
+  height: 80vh;
+  background: url('../images/appliances/hintbox.jpg') bottom center;
+  .cover;
+  text-align: center;
+  h2{
+    margin-top: 20vh;
+  }
+  p{
+    font-size: 22px;
+    color: darken(#716258, 10%);
+  }
+}
+
+
+
+
