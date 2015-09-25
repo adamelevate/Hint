@@ -65,13 +65,15 @@ top
 header{
   background: url('../images/header.png') top center;
   .cover;
-  @media (min-width: @screen-md-min) {  
+  @media (max-width: @screen-xs) {  
     //background-position: top left;
-    .container{height: 100vh;}
+    .container{
+      height: 100vh;
       h1{
           margin-top:12vh;
-          font-size: 5rem;
+          font-size: 3rem;
       }
+    }
   }
   .container{
     //min-height: 660px;
@@ -93,12 +95,9 @@ header{
   }
 	h1{
     margin-top:12vh;
-    font-size: 3rem;
+    font-size: 5rem;
     color: #fff;
     font-family: "proximanova-light";
-    @media (max-width: @screen-sm-max) { 
-      margin-top: 80px;
-    }
 	}
   span{
     font-family: "proximanova-bold";
@@ -168,7 +167,7 @@ section{
 .three{
   text-align: center;
   padding-bottom: 10vh;
-  @media (min-width: @screen-sm) {  
+  @media (min-width: @screen-sm-max) { 
     height: 80vh; 
     h2{
       margin-top: 10vh;
@@ -267,7 +266,7 @@ section{
   .cover;
   text-align: center;
   padding-bottom: 5vh;
-  @media (min-width: @screen-sm) { 
+  @media (min-width: @screen-sm-max) { 
     height: 80vh; 
     background-position: bottom center;
     padding-bottom: 0;
