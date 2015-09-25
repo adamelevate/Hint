@@ -3508,6 +3508,25 @@ button.button {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6d7be', endColorstr='#c1e3d1', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
+.orangegradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@secondary+0,1e5799+100 */
+  background: #fdb157;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #fdb157), color-stop(100%, #fc9a25));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #fdb157 0%, #fc9a25 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@secondary', endColorstr='darken(@secondary, 10%)', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
 body,
 html,
 #body {
@@ -3555,7 +3574,23 @@ top
 }
 .navbar-wrapper .button {
   margin-top: 18px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/@secondary+0,1e5799+100 */
   background: #fdb157;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #fdb157), color-stop(100%, #fc9a25));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #fdb157 0%, #fc9a25 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #fdb157 0%, #fc9a25 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@secondary', endColorstr='darken(@secondary, 10%)', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
 .navbar-wrapper.fix {
   background: #fff;
@@ -3658,7 +3693,7 @@ section .container .sub {
 }
 @media (min-width: 768px) {
   .three {
-    height: 90vh;
+    height: 80vh;
   }
   .three h2 {
     margin-top: 10vh;
