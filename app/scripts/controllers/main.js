@@ -9,9 +9,17 @@
  */
 angular.module('hintApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    
+    var height = jQuery('header').height();
+	var nav = jQuery("#nav");
+	jQuery(window).bind("scroll", function(e) {
+	    //console.log('body', jQuery('body').scrollTop());
+	  if (jQuery('body').scrollTop() > height-110) {
+	    nav.addClass("fix");
+	  }
+	  else {
+	    nav.removeClass("fix");
+	  }
+	  
+	});
   });

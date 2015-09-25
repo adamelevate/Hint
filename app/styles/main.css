@@ -3443,7 +3443,7 @@ html {
 }
 a.button,
 button.button {
-  background: #b3ddc7;
+  background: #68c8c3;
   font-family: "proximanova-bold";
   font-size: 17px;
   line-height: 48px;
@@ -3513,6 +3513,7 @@ html,
 #body {
   min-height: 100%;
   height: 100%;
+  color: #716258;
 }
 /*************
 
@@ -3523,7 +3524,7 @@ top
   margin-top: 24px;
   width: 150px;
   height: 100px;
-  color: #b3ddc7;
+  color: #68c8c3;
 }
 #logo svg path {
   height: 100%;
@@ -3545,12 +3546,12 @@ top
   margin-top: 10px;
   width: 75px;
   height: 50px;
-  color: #b3ddc7;
+  color: #68c8c3;
 }
 .navbar-wrapper .logo svg path {
   height: 100%;
   width: 100%;
-  fill: #b3ddc7;
+  fill: #68c8c3;
 }
 .navbar-wrapper .button {
   margin-top: 18px;
@@ -3562,34 +3563,32 @@ top
   opacity: 1;
 }
 header {
-  background: url('../images/header.jpg') top center;
+  background: url('../images/header.png') top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 @media (max-width: 991px) {
-  header {
-    background-position: top left;
-  }
   header .container {
     min-height: 550px!important;
   }
 }
 header .container {
   min-height: 660px;
-  height: 80vh;
+  height: 100vh;
+  position: relative;
 }
 header .logo {
   margin-top: 24px;
   width: 150px;
   height: 100px;
-  color: #b3ddc7;
+  color: #68c8c3;
 }
 header .logo path {
   height: 100%;
   width: 100%;
-  fill: #b3ddc7;
+  fill: #fff;
 }
 header h1 {
   margin-top: 12vh;
@@ -3602,12 +3601,38 @@ header h1 {
     margin-top: 80px;
   }
 }
-header .button-group span {
+header span {
   font-family: "proximanova-bold";
   margin-right: 15px;
   margin-left: 15px;
   font-size: 1.5rem;
   color: #fff;
+}
+header .button {
+  background: #68C8C3;
+  min-width: 150px;
+}
+header .bottom {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  width: 100%;
+}
+header .bottom .button.more {
+  min-width: 150px;
+  max-width: 300px;
+  text-align: center;
+  display: block;
+  background: transparent;
+  color: #fff;
+  margin: 0 auto;
+  text-shadow: 0 2px 1px #333;
+}
+header .bottom .button.more span {
+  display: block;
+  text-align: center;
+  line-height: 14px;
+  font-size: 24px;
 }
 .min-height {
   min-height: 460px;
@@ -3618,6 +3643,112 @@ section .container {
 section .container h2 {
   text-align: center;
   font-family: "proximanova-light";
-  font-size: 2rem;
-  color: #777;
+  font-size: 2.6rem;
+  line-height: 2.8rem;
+}
+section .container .sub {
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 600px;
+  margin: 0 auto 10vh;
+}
+.three {
+  text-align: center;
+  padding-bottom: 10vh;
+}
+@media (min-width: 768px) {
+  .three {
+    height: 90vh;
+  }
+  .three h2 {
+    margin-top: 10vh;
+  }
+}
+.three.green .fa {
+  color: #68c8c3;
+}
+.three h2 {
+  margin: 20vh 0 2vh;
+}
+.three .fa {
+  font-size: 3.6rem;
+  margin-bottom: 15px;
+  color: #68c8c3;
+}
+.three h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-family: "proximanova-regular";
+  margin: 0;
+}
+.three p {
+  font-size: 14px;
+  line-height: 20px;
+}
+.appliances {
+  padding: 5vh 0;
+  background: #f3f3f3;
+}
+.appliances h2 {
+  color: #68c8c3;
+}
+.appliances .wrap {
+  background: #fff;
+  width: 90%;
+  border-radius: 10px;
+  transition: .2s all linear;
+  margin: 0 auto 40px;
+}
+.appliances .wrap:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 5px #ddd;
+}
+.appliances .wrap .appliance {
+  border-radius: 10px 10px 0 0;
+  background-size: cover!important;
+  background-position: center center!important;
+  background-repeat: no-repeat !important;
+  min-height: 180px;
+}
+.appliances img {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  max-width: 200px;
+}
+.appliances .text {
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+.appliances .row {
+  text-align: center;
+}
+.appliances .row .col-xs-6 {
+  padding: 10px 0;
+}
+.appliances .row strong {
+  color: #68c8c3;
+}
+.appliances .row .dollar {
+  color: #ddd;
+}
+.appliances .row .dollar.active {
+  color: #68c8c3;
+}
+.hintbox {
+  height: 80vh;
+  background: url('../images/appliances/hintbox.jpg') bottom center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+.hintbox h2 {
+  margin-top: 20vh;
+}
+.hintbox p {
+  font-size: 22px;
+  color: #544942;
 }
